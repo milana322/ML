@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flower Classifier</title>
+</head>
+<body style="font-family: sans-serif;">
+  <h1>Классификатор Цветов</h1>
+  <form method="POST" action="/" enctype="multipart/form-data">
+    <label for="file">Загрузите фото цветка:</label><br><br>
+    <input type="file" id="file" name="file" accept="image/*"><br><br>
+    <button type="submit">Классифицировать</button>
+  </form>
+
+  {% if prediction %}
+    <h2>Результат: {{ prediction }}</h2>
+  {% endif %}
+</body>
+</html>
